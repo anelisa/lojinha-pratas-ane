@@ -1,0 +1,15 @@
+<div>
+  <h2>Login</h2>
+  <h3>Loja de pratas da Anelisa</h3>
+  <form [formGroup]="loginForm" *ngIf="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" formControlName="email">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" formControlName="password">
+    </div>
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+  </form>
+</div>
